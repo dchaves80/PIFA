@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography.Pkcs;
+using System.Xml;
+
 
 namespace WindowsFormsApp5
 {
@@ -25,21 +27,66 @@ namespace WindowsFormsApp5
 
 
             string msg = "<loginTicketRequest version=\"1.0\"><header>"+
-                //"<source>cn=FePrueba,ou=facturacion,o=feprueba,c=ar,serialNumber=CUIT 20318079359</source>" +
-                             "<destination>cn=wsaahomo,o=afip,c=ar,serialNumber=CUIT 20318079359</destination>" +
-                "<uniqueId>43255</uniqueId><generationTime>2019-06-03T17:05:00-03:00</generationTime>" +
-                    "<expirationTime>2019-06-03T18:00:00-03:00</expirationTime></header><service>wsfe</service></loginTicketRequest>";
+                             //"<source>cn=FePrueba,ou=facturacion,o=FePrueba,c=ar,serialNumber=CUIT 20318079359</source>" +
+                             "<destination>cn=wsaa,o=afip,c=ar,serialNumber=CUIT 33693450239</destination>" +
+                "<uniqueId>43255</uniqueId><generationTime>" + DateTime.Now.Year + "-0" + DateTime.Now.Month + "-0" + DateTime.Now.Day + "T0" + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":00-03:00</generationTime>" +
+                    "<expirationTime>2019-06-04T05:00:00-03:00</expirationTime></header><service>wsmtxca</service></loginTicketRequest>";
 
             byte[] msg2 = CertificadosX509Lib.FirmaBytesMensaje(Encoding.ASCII.GetBytes(msg),Cert);
 
 
-            ar.gov.afip.wsaahomo.LoginCMSService S = new ar.gov.afip.wsaahomo.LoginCMSService();
+            //ar.gov.afip.wsaahomo.LoginCMSService S = new ar.gov.afip.wsaahomo.LoginCMSService();
+            WSAAProduccion.LoginCMSClient Login = new WSAAProduccion.LoginCMSClient();
             
-            S.loginCms(Convert.ToBase64String(msg2));
+            //S.Url = "https://wsaa.afip.gov.ar/ws/services/LoginCms";
+           String Response =  Login.loginCms(Convert.ToBase64String(msg2));
+
+            XmlDocument XML = new XmlDocument();
+            XML.LoadXml(Response);
+            //WSMTXCAProduccion.AuthRequestType ART = new WSMTXCAProduccion.AuthRequestType();
+            ar.gob.afip.serviciosjava.AuthRequestType ART = new ar.gob.afip.serviciosjava.AuthRequestType();
+            ART.cuitRepresentada = 20318079359;
+            ART.sign = XML.GetElementsByTagName("sign")[0].InnerText;
+            ART.token = XML.GetElementsByTagName("token")[0].InnerText;
+            
+
+           
+           //anda todo... 
+          
+            /*ar.gob.afip.serviciosjava.MTXCAService S = new ar.gob.afip.serviciosjava.MTXCAService();
+            ar.gob.afip.serviciosjava.CodigoDescripcionType DT = new ar.gob.afip.serviciosjava.CodigoDescripcionType();
+            ar.gob.afip.serviciosjava.CodigoDescripcionType[] tipos = S.consultarTiposComprobante(ART,out DT);*/
+
+            
+           
+
+           
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
 
 
-            
+
+
+
+            MessageBox.Show(XML.GetElementsByTagName("token")[0].InnerText);
+            MessageBox.Show(XML.GetElementsByTagName("sign")[0].InnerText);
+
+           
+
+
+
 
 
         }

@@ -26,10 +26,20 @@ namespace WindowsFormsApp5.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://wsaahomo.afip.gov.ar/ws/services/LoginCms")]
-        public string WindowsFormsApp5_ar_gov_afip_wsaahomo_LoginCMSService {
+        [global::System.Configuration.DefaultSettingValueAttribute("https://serviciosjava.afip.gob.ar/wsmtxca/services/MTXCAService")]
+        public string WindowsFormsApp5_ar_gob_afip_serviciosjava_MTXCAService {
             get {
-                return ((string)(this["WindowsFormsApp5_ar_gov_afip_wsaahomo_LoginCMSService"]));
+                return ((string)(this["WindowsFormsApp5_ar_gob_afip_serviciosjava_MTXCAService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://servicios1.afip.gov.ar/wsfev1/service.asmx")]
+        public string WindowsFormsApp5_ar_gov_afip_servicios_Service {
+            get {
+                return ((string)(this["WindowsFormsApp5_ar_gov_afip_servicios_Service"]));
             }
         }
     }
