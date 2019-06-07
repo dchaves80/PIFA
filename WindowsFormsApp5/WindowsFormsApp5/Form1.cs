@@ -45,17 +45,21 @@ namespace WindowsFormsApp5
             XML.LoadXml(Response);
             //WSMTXCAProduccion.AuthRequestType ART = new WSMTXCAProduccion.AuthRequestType();
             ar.gob.afip.serviciosjava.AuthRequestType ART = new ar.gob.afip.serviciosjava.AuthRequestType();
+
+
+            //AUTH REQUEST DE AUTORIZACION
             ART.cuitRepresentada = 20318079359;
             ART.sign = XML.GetElementsByTagName("sign")[0].InnerText;
             ART.token = XML.GetElementsByTagName("token")[0].InnerText;
-            
 
-           
-           //anda todo... 
-          
-            /*ar.gob.afip.serviciosjava.MTXCAService S = new ar.gob.afip.serviciosjava.MTXCAService();
+            //Instanciacion del mtx
+            ar.gob.afip.serviciosjava.MTXCAService S = new ar.gob.afip.serviciosjava.MTXCAService();
+            //Instanciacion de no se que carajo es esto
             ar.gob.afip.serviciosjava.CodigoDescripcionType DT = new ar.gob.afip.serviciosjava.CodigoDescripcionType();
-            ar.gob.afip.serviciosjava.CodigoDescripcionType[] tipos = S.consultarTiposComprobante(ART,out DT);*/
+            //Consulta de tipos comprobantes 
+            ar.gob.afip.serviciosjava.CodigoDescripcionType[] tipos = S.consultarTiposComprobante(ART,out DT);
+
+            
 
             
            
