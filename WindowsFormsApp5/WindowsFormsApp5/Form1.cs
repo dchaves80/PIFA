@@ -58,27 +58,28 @@ namespace WindowsFormsApp5
             ar.gob.afip.serviciosjava.CodigoDescripcionType DT = new ar.gob.afip.serviciosjava.CodigoDescripcionType();
             //Consulta de tipos comprobantes 
             ar.gob.afip.serviciosjava.CodigoDescripcionType[] tipos = S.consultarTiposComprobante(ART,out DT);
-
             
 
-            
-           
 
-           
 
-            
-            
-            
+
+
+
+
+
+
+
+
             //prueba 
-            
+
             //prueba 2
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
 
 
 
