@@ -1,0 +1,12 @@
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\bin\Release\WindowsFormsApp5.exe.config
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\bin\Release\WindowsFormsApp5.exe
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\bin\Release\WindowsFormsApp5.XmlSerializers.dll
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\bin\Release\WindowsFormsApp5.pdb
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\obj\Release\WindowsFormsApp5.csprojAssemblyReference.cache
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\obj\Release\WindowsFormsApp5.Form1.resources
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\obj\Release\WindowsFormsApp5.Properties.Resources.resources
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\obj\Release\WindowsFormsApp5.csproj.GenerateResource.cache
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\obj\Release\WindowsFormsApp5.csproj.CoreCompileInputs.cache
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\obj\Release\WindowsFormsApp5.exe
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\obj\Release\WindowsFormsApp5.pdb
+D:\PIFA\WindowsFormsApp5\WindowsFormsApp5\obj\Release\WindowsFormsApp5.XmlSerializers.dll
