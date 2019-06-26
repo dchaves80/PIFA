@@ -29,8 +29,8 @@ namespace WindowsFormsApp5
             string msg = "<loginTicketRequest version=\"1.0\"><header>"+
                              //"<source>cn=FePrueba,ou=facturacion,o=FePrueba,c=ar,serialNumber=CUIT 20318079359</source>" +
                              "<destination>cn=wsaa,o=afip,c=ar,serialNumber=CUIT 33693450239</destination>" +
-                "<uniqueId>43255</uniqueId><generationTime>" + DateTime.Now.Year + "-0" + DateTime.Now.Month + "-" + DateTime.Now.Day + "T" + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":00</generationTime>" +
-                    "<expirationTime>" + DateTime.Now.Year + "-0" + DateTime.Now.Month + "-" + DateTime.Now.Day + "T" + (DateTime.Now.Hour+2).ToString() + ":" + DateTime.Now.Minute + ":00 </expirationTime></header><service>wsmtxca</service></loginTicketRequest>";
+                "<uniqueId>43255</uniqueId><generationTime>2019-06-26" + "T" +  "18:00:00</generationTime>" +
+                    "<expirationTime>2019-06-26" + "T" + "23:59:00 </expirationTime></header><service>wsmtxca</service></loginTicketRequest>";
 
             byte[] msg2 = CertificadosX509Lib.FirmaBytesMensaje(Encoding.ASCII.GetBytes(msg),Cert);
 
