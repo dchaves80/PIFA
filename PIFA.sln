@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIFA", "PIFA.csproj", "{EEDCD7D6-6314-4865-BA49-469FD029D904}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEDCD7D6-6314-4865-BA49-469FD029D904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEDCD7D6-6314-4865-BA49-469FD029D904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEDCD7D6-6314-4865-BA49-469FD029D904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEDCD7D6-6314-4865-BA49-469FD029D904}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E55B0DD-1A4C-4BF2-AFDB-59035F907562}
+	EndGlobalSection
+EndGlobal
